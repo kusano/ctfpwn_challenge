@@ -1,8 +1,9 @@
 {
   "congrats": "/files/congrats.jpg",
+  "id": "ctfpwn2",
   "problems": [
     {
-      "description": "<p>Can you login?</p>\n<ul>\n  <li><a href=\"/files/login1\">login1</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10001</pre>\n</p>\n",
+      "description": "<p>Can you login?</p>\n<ul>\n  <li><a href=\"/files/login1.c\">login1.c</a></li>\n  <li><a href=\"/files/login1\">login1</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10001</pre>\n</p>\n",
       "flag": "81e515f481aa8b6db811a36d04c32814f8f19179655aab44f2c1fce90e741e72",
       "genre": [
         "stack",
@@ -12,7 +13,7 @@
       "title": "login1"
     },
     {
-      "description": "<p>Can't you login?</p>\n<ul>\n  <li><a href=\"/files/login2\">login2</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10002</pre>\n</p>\n",
+      "description": "<p>Can't you login?</p>\n<ul>\n  <li><a href=\"/files/login2.c\">login2.c</a></li>\n  <li><a href=\"/files/login2\">login2</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10002</pre>\n</p>\n",
       "flag": "6c09d6ee9b3c225232471b04f5a886f0be927302cfdceec7dbba51411e98eb25",
       "genre": [
         "stack",
@@ -22,7 +23,7 @@
       "title": "login2"
     },
     {
-      "description": "<p>You can login. So what?</p>\n<ul>\n  <li><a href=\"/files/login3\">login3</a></li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10003</pre>\n</p>\n",
+      "description": "<p>You can login. So what?</p>\n<ul>\n  <li><a href=\"/files/login3.c\">login3.c</a></li>\n  <li><a href=\"/files/login3\">login3</a></li>\n  <li><a href=\"/files/libc-2.31.so\">libc-2.31.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10003</pre>\n</p>\n",
       "flag": "cd61be8d02f2b06214f2b502cd05fbe7925f000f017d286c9f401a590fe31ba5",
       "genre": [
         "stack"
@@ -31,7 +32,7 @@
       "title": "login3"
     },
     {
-      "description": "<p>Hint: Lbh pna fbyir guvf ceboyrz ol sbezng fgevat nggnpx.</p>\n<ul>\n  <li><a href=\"/files/rot13\">rot13</a></li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10004</pre>\n</p>\n",
+      "description": "<p>Hint: Lbh pna fbyir guvf ceboyrz ol sbezng fgevat nggnpx.</p>\n<ul>\n  <li><a href=\"/files/rot13.c\">rot13.c</a></li>\n  <li><a href=\"/files/rot13\">rot13</a></li>\n  <li><a href=\"/files/libc-2.31.so\">libc-2.31.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10004</pre>\n</p>\n",
       "flag": "3e076dd2223622c1ce6326a64ea0f525900c0f4270a9aa99ca56600808b68705",
       "genre": [
         "FSA"
@@ -40,34 +41,83 @@
       "title": "rot13"
     },
     {
-      "description": "<p>\ud83d\udc26\ud83d\udc26\ud83d\udc26 Do you like the Party Parrot? \ud83d\udc26\ud83d\udc26\ud83d\udc26</p>\n<ul>\n  <li><a href=\"/files/birdcage\">birdcage</a></li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10005</pre>\n</p>\n",
+      "description": "<p>\ud83d\udc26\ud83d\udc26\ud83d\udc26 Do you like the Party Parrot? \ud83d\udc26\ud83d\udc26\ud83d\udc26</p>\n<ul>\n  <li><a href=\"/files/birdcage.cpp\">birdcage.cpp</a></li>\n  <li><a href=\"/files/birdcage\">birdcage</a>\n    <ul>\n      <li>In the server, patched with:\n        <pre style=\"white-space: pre-wrap\">patchelf --set-rpath /lib227/ --set-interpreter /lib227/ld-2.27.so birdcage</pre>\n      </li>\n    </ul>\n  </li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10005</pre>\n</p>\n",
       "flag": "c3eb1c689635cae43797e3653572b651bceed95c5e115f15ea06717c9bce8b0a",
       "genre": [
         "C++",
-        "heap"
+        "glibc2.27"
       ],
       "image": "/files/birdcage.jpg",
       "title": "birdcage"
     },
     {
-      "description": "<p>String Storage</p>\n<ul>\n  <li><a href=\"/files/strstr\">strstr</a></li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10006</pre>\n</p>\n",
+      "description": "<p>String Storage</p>\n<ul>\n  <li><a href=\"/files/strstr.c\">strstr.c</a></li>\n  <li><a href=\"/files/strstr\">strstr</a>\n    <ul>\n      <li>In the server, patched with:\n        <pre style=\"white-space: pre-wrap\">patchelf --set-rpath /lib227/ --set-interpreter /lib227/ld-2.27.so strstr</pre>\n      </li>\n    </ul>\n  </li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10006</pre>\n</p>\n",
       "flag": "80ace8f1aab859a76c806b4a8843e66347870f6eda53f9ca9acaaf7c7821b151",
       "genre": [
         "heap",
-        "hard"
+        "glibc2.27"
       ],
-      "image": "/files/strstr.jpg",
-      "title": "strstr"
+      "image": "/files/strstr227.jpg",
+      "title": "strstr227"
     },
     {
-      "description": "<p>Strong String Storage</p>\n<ul>\n  <li><a href=\"/files/strstrstr\">strstrstr</a></li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10007</pre>\n</p>\n",
+      "description": "<p>String Storage</p>\n<ul>\n  <li><a href=\"/files/strstr.c\">strstr.c</a></li>\n  <li><a href=\"/files/strstr\">strstr</a></li>\n  <li><a href=\"/files/libc-2.31.so\">libc-2.31.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10007</pre>\n</p>\n",
+      "flag": "8162a6d6cec360ff9aaefdd82d3538d7428e7fb38810da5b00744f303a798905",
+      "genre": [
+        "heap"
+      ],
+      "image": "/files/strstr231.jpg",
+      "title": "strstr231"
+    },
+    {
+      "description": "<p>Strong String Storage</p>\n<ul>\n  <li><a href=\"/files/strstrstr.c\">strstrstr.c</a></li>\n  <li><a href=\"/files/strstrstr\">strstrstr</a>\n    <ul>\n      <li>In the server, patched with:\n        <pre style=\"white-space: pre-wrap\">patchelf --set-rpath /lib227/ --set-interpreter /lib227/ld-2.27.so strstrstr</pre>\n      </li>\n    </ul>\n  </li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10008</pre>\n</p>\n",
       "flag": "7960128b3cf118629d5119340b4d4feb62aa41290dce1de4585cff21dedd93e1",
       "genre": [
         "heap",
-        "hard"
+        "hard",
+        "glibc2.27"
       ],
       "image": "/files/strstrstr.jpg",
       "title": "strstrstr"
+    },
+    {
+      "description": "<p>free()-free since free() is a dangerous function.</p>\n<ul>\n  <li><a href=\"/files/freefree.c\">freefree.c</a></li>\n  <li><a href=\"/files/freefree\">freefree</a></li>\n  <li><a href=\"/files/libc-2.31.so\">libc-2.31.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10009</pre>\n</p>\n",
+      "flag": "b61c90eec2ddff48d2de310de9f0bb4813d8b981496fdffd7b5b04d1fd8e6f66",
+      "genre": [
+        "heap"
+      ],
+      "image": "/files/freefree.jpg",
+      "title": "freefree"
+    },
+    {
+      "description": "<p>free()-free since free() is a dangerous function. malloc() is also dangerous?</p>\n<ul>\n  <li><a href=\"/files/freefree++.c\">freefree++.c</a></li>\n  <li><a href=\"/files/freefree++\">freefree++</a>\n    <ul>\n      <li>In the server, patched with:\n        <pre style=\"white-space: pre-wrap\">patchelf --set-rpath /lib227/ --set-interpreter /lib227/ld-2.27.so freefree++</pre>\n      </li>\n    </ul>\n  </li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10010</pre>\n</p>\n",
+      "flag": "83cba538618eb2903c37793557a556c11d891be27db717d8b30949f1cb47f5fa",
+      "genre": [
+        "heap",
+        "glibc2.27"
+      ],
+      "image": "/files/freefree++227.jpg",
+      "title": "freefree++227"
+    },
+    {
+      "description": "<p>free()-free since free() is a dangerous function. malloc() is also dangerous?</p>\n<ul>\n  <li><a href=\"/files/freefree++.c\">freefree++.c</a></li>\n  <li><a href=\"/files/freefree++\">freefree++</a></li>\n  <li><a href=\"/files/libc-2.31.so\">libc-2.31.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10011</pre>\n</p>\n",
+      "flag": "b5ed8dfcfd4415bfdb9f27ba52b63be8b27f310e4ebca01d6240ebe4fb0f8b6b",
+      "genre": [
+        "heap"
+      ],
+      "image": "/files/freefree++231.jpg",
+      "title": "freefree++231"
+    },
+    {
+      "description": "<p><br><br></p>\n<ul>\n  <li><a href=\"/files/writefree.c\">writefree.c</a></li>\n  <li><a href=\"/files/writefree\">writefree</a>\n    <ul>\n      <li>In the server, patched with:\n        <pre style=\"white-space: pre-wrap\">patchelf --set-rpath /lib227/ --set-interpreter /lib227/ld-2.27.so writefree</pre>\n      </li>\n    </ul>\n  </li>\n  <li><a href=\"/files/libc-2.27.so\">libc-2.27.so</a></li>\n</ul>\n<p>\n  <pre>nc localhost 10012</pre>\n</p>\n",
+      "flag": "553aa075bd4b3d05557fe0108a69bc48b56b51ce5e72c31438a6c4e7e6bdece3",
+      "genre": [
+        "heap",
+        "hard",
+        "glibc2.27"
+      ],
+      "image": "/files/writefree.jpg",
+      "title": "writefree"
     }
   ]
 }
