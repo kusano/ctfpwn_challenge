@@ -15,6 +15,10 @@ RUN \
 
 COPY score/ /var/www/html/
 COPY files/ /var/www/html/files/
+COPY c_cpp.conf /etc/nginx/conf.d/
+# for Docker for Windows
+RUN find /var/www/html/ -type f -print | xargs chmod 644
+RUN chmod 644 /etc/nginx/conf.d/c_cpp.conf
 
 COPY setup.sh /tmp/
 RUN /bin/bash /tmp/setup.sh && \
