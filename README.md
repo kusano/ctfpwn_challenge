@@ -10,7 +10,7 @@ Dockerで動作します。
 Docker Hubからインストールする場合。
 
 ```
-docker run --rm -it -p 10080:80 -p 10001-10012:10001-10012 kusanok/ctfpwn:2
+docker run --rm -it -p 10080:80 -p 10001-10013:10001-10013 kusanok/ctfpwn
 ```
 
 このGitHubリポジトリからダウンロードしてビルドする場合。
@@ -19,7 +19,7 @@ docker run --rm -it -p 10080:80 -p 10001-10012:10001-10012 kusanok/ctfpwn:2
 git clone https://github.com/kusano/ctfpwn_challenge.git
 cd ctfpwn_challenge
 docker build -t ctfpwn .
-docker run --rm -it -p 10080:80 -p 10001-10012:10001-10012 ctfpwn
+docker run --rm -it -p 10080:80 -p 10001-10013:10001-10013 ctfpwn
 ```
 
 ブラウザで http://localhost:10080 を開いてください。

@@ -1,4 +1,4 @@
-//  g++ birdcage.cpp -o birdcage -std=c++17 -no-pie -fcf-protection=none
+//  g++ birdcage.cpp -o birdcage -std=c++17 -no-pie
 #include <iostream>
 #include <string>
 #include <typeinfo>

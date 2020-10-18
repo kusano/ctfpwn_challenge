@@ -25,5 +25,5 @@ int main()
     if (strcmp(id, "admin") == 0)
         printf("Login Succeeded\n");
     else
-        printf("Invalid ID or password\n");
+        printf("Invalid ID\n");
 }

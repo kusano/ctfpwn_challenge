@@ -118,6 +118,15 @@
       ],
       "image": "/files/writefree.jpg",
       "title": "writefree"
+    },
+    {
+      "description": "<p>\n<pre>DoYouKnowShellsort?\nwouosKronSlehlYoDt?</pre>\n</p>\n<ul>\n  <li><a href=\"/files/shellsort.c\">shellsort.c</a></li>\n  <li><a href=\"/files/shellsort\">shellsort</a>\n</ul>\n<p>\n  <pre>nc localhost 10013</pre>\n</p>\n",
+      "flag": "81e515f481aa8b6db811a36d04c32814f8f19179655aab44f2c1fce90e741e72",
+      "genre": [
+        "shellcode"
+      ],
+      "image": "/files/shellsort.jpg",
+      "title": "shellsort"
     }
   ]
 }

@@ -8,7 +8,7 @@ ln -s /lib227/libc-2.27.so /lib227/libc.so.6
 useradd user
 
 port=10001
-for id in login1 login2 login3 rot13 birdcage strstr227 strstr231 strstrstr freefree freefree++227 freefree++231 writefree
+for id in login1 login2 login3 rot13 birdcage strstr227 strstr231 strstrstr freefree freefree++227 freefree++231 writefree shellsort
 do
   useradd $id
   mkdir /home/$id

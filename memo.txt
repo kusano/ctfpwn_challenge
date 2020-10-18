@@ -3,3 +3,10 @@ https://github.com/kusano/ctfpwn_problem (private)
 
 /score
 https://github.com/kusano/ctfpwn_score
+
+docker build -t kusanok/ctfpwn:3 .
+docker build -t kusanok/ctfpwn .
+docker login
+docker push kusanok/ctfpwn:3
+docker push kusanok/ctfpwn:latest
+docker logout
