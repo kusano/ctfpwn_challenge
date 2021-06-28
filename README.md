@@ -10,8 +10,10 @@ Dockerで動作します。
 Docker Hubからインストールする場合。
 
 ```
-docker run --rm -it -p 10080:80 -p 10001-10013:10001-10013 kusanok/ctfpwn
+docker run --rm -it -p 10081:80 -p 10001-10013:10001-10013 kusanok/ctfpwn
 ```
+
+※10080ポートのアクセスがunsafe portとしてブラウザにブロックされるようになったため、10081ポートを使用しています。
 
 このGitHubリポジトリからダウンロードしてビルドする場合。
 
@@ -19,10 +21,10 @@ docker run --rm -it -p 10080:80 -p 10001-10013:10001-10013 kusanok/ctfpwn
 git clone https://github.com/kusano/ctfpwn_challenge.git
 cd ctfpwn_challenge
 docker build -t ctfpwn .
-docker run --rm -it -p 10080:80 -p 10001-10013:10001-10013 ctfpwn
+docker run --rm -it -p 10081:80 -p 10001-10013:10001-10013 ctfpwn
 ```
 
-ブラウザで http://localhost:10080 を開いてください。
+ブラウザで http://localhost:10081 を開いてください。
 
 最後のコマンドを実行している間だけ動きます。
 解答状況はブラウザのlocal storageに保存されます。
