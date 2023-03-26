@@ -1,6 +1,7 @@
 //  gcc shellsort.c -o shellsort -z execstack -fpie -fcf-protection=none
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/mman.h>
 
 void setup()
 {
@@ -10,9 +11,7 @@ void setup()
     setvbuf(stderr, NULL, _IONBF, 0);
 }
 
-unsigned char shell[256];
-
-void shellsort()
+void shellsort(unsigned char *shell)
 {
     int i, j;
     for (i=2; i<256; i+=2)
@@ -27,10 +26,14 @@ void shellsort()
 
 int main()
 {
+    unsigned char *shell;
+
     setup();
 
+    shell = mmap(NULL, 256, PROT_READ|PROT_WRITE|PROT_EXEC,
+        MAP_PRIVATE|MAP_ANONYMOUS, -1, 0);
     printf("Your shell code: ");
     scanf("%255s", shell);
-    shellsort();
+    shellsort(shell);
     ((void (*)(void))shell)();
 }
